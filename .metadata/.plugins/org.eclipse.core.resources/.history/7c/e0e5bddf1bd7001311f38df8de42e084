@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//client/client.py=utf-8
+encoding//client/login.py=utf-8
+encoding//client/user.py=utf-8
+encoding/chatclient.py=utf-8
+encoding/chatmodule.py=UTF-8
+encoding/server.py=utf-8

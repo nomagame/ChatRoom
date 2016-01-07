@@ -1,0 +1,5 @@
+import sys; print('%s %s' % (sys.executable or sys.platform, sys.version))
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+import sys; print('%s %s' % (sys.executable or sys.platform, sys.version))
+import sys; print('%s %s' % (sys.executable or sys.platform, sys.version))
+import sys; print('%s %s' % (sys.executable or sys.platform, sys.version))

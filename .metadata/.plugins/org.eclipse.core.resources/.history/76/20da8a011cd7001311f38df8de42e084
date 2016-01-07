@@ -1,0 +1,37 @@
+#!/usr/bin/python
+#-*- coding:utf-8 -*-
+known = {'浣犲ソ' : '浣犲ソ鍛�' ,'鍡� : '浣犲ソ鍝�}
+history = []
+print '浣犲ソ, 鎴戞槸Chatbot锛岃窡鎴戣亰澶╁惂!'
+while True:
+    inputed = raw_input('>>>')
+    temp = ''
+    for i in inputed:
+        if i != ',' and i != '.' and i != '!' and i != '?':
+            temp = temp + str(i).lower()
+    if temp == 'show known' or temp == 'show history':
+        if temp == 'show known':
+            print
+            print '鎴戠煡閬�'
+            for i in known:
+                print '    濡傛灉浣犺 \'' + i + '\', 鎴戝氨璇�\'' + known[i] + '\''
+        else:
+            print '鑱婂ぉ璁板綍:'
+            for i in history:
+                print '    ' + i
+            print
+    else:
+        history.append('User: ' + inputed)
+        inputed = False
+        for i in known:
+            if temp.endswith(i):
+                inputed = i
+        if inputed != False:
+            print known[inputed]
+            history.append('Chatbot: ' + known[inputed])
+        else:
+            print '绯熺硶锛屾垜涓嶇煡閬撴�涔堝洖绛旓紝鎴戝簲璇ヨ浠�箞鍛�'
+            appr = raw_input('<<<')
+            known[temp] = appr
+            history.append('Chatbot涓嶇煡閬撹浠�箞锛屼綘璇村簲璇ュ洖绛�\'' + appr + '\' 銆�)
+            print 'ok锛屾垜鏄庣櫧浜嗐�'

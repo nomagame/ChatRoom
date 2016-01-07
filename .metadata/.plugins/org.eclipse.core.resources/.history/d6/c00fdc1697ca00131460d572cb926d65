@@ -1,0 +1,20 @@
+# -*- coding:utf-8 -*-
+'''
+Created on 2014年4月23日
+
+@author: liuxu
+'''
+import wx
+class Login(wx.App):
+    def OnInit(self):
+        frame = wx.Frame(parent = None,title = 'wxPython',size = (300,200))
+        
+        panel = wx.Panel(frame,-1)
+        label3 = wx.StaticText(panel,-1,'wxPython',pos = (120,20))
+        label4 = wx.StaticText(panel,-1,'User Name',pos = (10.100))
+        
+        text = wx.TextCtrl(panel,
+                           -1,
+                           pos = (100,100)，
+                           size = (160,-1),
+                           style = wx.TE_PASSWORD)

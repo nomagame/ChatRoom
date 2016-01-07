@@ -1,0 +1,81 @@
+# -*- coding: utf-8 -*-
+'''
+Created on 2014年4月2日
+Version:V1.0
+@author:Liuxu
+'''
+import socket    
+import threading                             #导入 socket module
+from socket import AF_INET,SOCK_STREAM      #error:Unresolved import:AF_INIT,SOCK_STREAM
+inString = '';
+outString = '';
+nick = '';
+
+def DealOut(s):                             #raw_input() 
+    global nick, outString;
+    while True:
+        outString = raw_input();
+        outString = nick + ': ' + outString;
+        s.send(outString);
+
+def DealIn(s):                              #s.recv()
+    global inString;
+    while True:
+        try:
+            inString = s.recv(1024);
+            if not inString:
+                break;
+            if outString != inString:
+                print inString;
+        except:
+            break;
+
+nick = raw_input("请输入用户名: ");
+ip = raw_input("输入服务器IP地址: ");
+sock = socket.socket(AF_INET,SOCK_STREAM);  #创建套接字，连接远端地址  socket.socket & sock.connect
+sock.connect((ip, 8888));                   
+sock.send(nick);                            #连接后发送数据和接收数据sock.send()
+
+data = ''
+con = threading.Condition()
+def clientThreadIn(conn, nick):         #conn.recv 
+    global data
+    while True:
+        try:
+            temp = conn.recv(1024)      #把接收到的数据实例化
+            if not temp:
+                conn.close()
+                return
+            NotifyAll(temp)
+            print data
+        except:
+            NotifyAll(nick + "离开房间!")
+            print data
+            return
+
+
+def NotifyAll(sss):                    #con.notifyAll
+    global data
+    if con.acquire():
+        data = sss
+        con.notifyAll()
+        con.release()
+ 
+def ClientThreadOut(conn, nick):       #conn.send & conn.release
+    global data
+    while True:
+        if con.acquire():
+            con.wait()
+            if data:
+                try:
+                    conn.send(data)
+                    con.release()
+                except:
+                    con.release()
+                    return
+print data
+
+thin = threading.Thread(target = DealIn, args = (sock,));
+thin.start();
+thout = threading.Thread(target = DealOut, args = (sock,));
+thout.start();

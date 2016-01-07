@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;chatroom-gevent/__init__.py&apos;" deleteContents="false" description="Delete resource &apos;chatroom-gevent/__init__.py&apos;" element1="/chatroom-gevent/__init__.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1398329790160"/>&#x0A;<refactoring comment="Rename resource &apos;chatroom-gevent&apos; to &apos;chatroom-gevent-test&apos;" description="Rename resource &apos;chatroom-gevent&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/chatroom-gevent" name="chatroom-gevent-test" stamp="1398413384659" updateReferences="true"/>
+</session>

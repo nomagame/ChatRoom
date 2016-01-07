@@ -1,0 +1,10 @@
+MODULES_MANAGER_V2
+chatclient|N:\chatroom\chatroom\chatclient.py
+chatclient2|N:\chatroom\chatroom\chatclient2.py
+chatmodule|N:\chatroom\chatroom\chatmodule.py
+client.__init__|N:\chatroom\chatroom\client\__init__.py
+client.client|N:\chatroom\chatroom\client\client.py
+client.login|N:\chatroom\chatroom\client\login.py
+client.user|N:\chatroom\chatroom\client\user.py
+server|N:\chatroom\chatroom\server.py
+server2|N:\chatroom\chatroom\server2.py

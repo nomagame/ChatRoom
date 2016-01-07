@@ -1,0 +1,54 @@
+-- VERSION_4
+-- START DISKCACHE
+N:\chatroom\.metadata\.plugins\org.eclipse.core.resources\.projects\chatroom\com.python.pydev.analysis\v2_indexcache
+chatmodule|1399943400034|N:\chatroom\chatroom\chatmodule.py
+client.login|1398224737000|N:\chatroom\chatroom\client\login.py
+client.client|1398301882000|N:\chatroom\chatroom\client\client.py
+chatclient2|1398310105000|N:\chatroom\chatroom\chatclient2.py
+server2|1398311389000|N:\chatroom\chatroom\server2.py
+chatclient|1399516227190|N:\chatroom\chatroom\chatclient.py
+server|1399516212981|N:\chatroom\chatroom\server.py
+client.__init__|1398413350000|N:\chatroom\chatroom\client\__init__.py
+client.user|1398327698000|N:\chatroom\chatroom\client\user.py
+-- END DISKCACHE
+-- START DICTIONARY
+10
+3=chatmodule
+1=client.login
+4=client.client
+8=chatclient2
+5=server2
+7=chatclient
+6=server
+2=client.user
+10=MyApp
+9=myapp
+-- END DICTIONARY
+-- START TREE 1
+21
+app|4|app!11@app!19@appr!27@app!35@
+cli|6|ClientThreadOut!42@ClientThreadOut!50@clientThreadIn!58@clientThreadIn!50@ClientThreadOut!58@clientThreadIn!42@
+con|3|con!51@con!43@con!59@
+dat|3|data!59@data!51@data!43@
+dea|4|DealIn!66@DealIn!58@DealOut!58@DealOut!66@
+his|1|history!27@
+hos|2|Host!43@HOST!51@
+inp|1|inputed!27@
+ins|2|inString!67@inString!59@
+ip|2|ip!67@ip!59@
+kno|1|known!27@
+mya|3|myapp!17@myapp!9@MyApp!33@
+nic|2|nick!67@nick!59@
+not|3|NotifyAll!42@NotifyAll!50@NotifyAll!58@
+out|2|outString!59@outString!67@
+por|2|PORT!43@PORT!51@
+s|2|s!51@s!43@
+soc|2|sock!67@sock!59@
+tem|1|temp!27@
+thi|2|thin!59@thin!67@
+tho|2|thout!67@thout!59@
+-- END TREE
+-- START TREE 2
+1
+oni|3|OnInit!9&18@OnInit!10&34@OnInit!9&10@
+-- END TREE
